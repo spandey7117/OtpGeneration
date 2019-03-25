@@ -1,4 +1,4 @@
-package com.OtpGeneratiom;
+package com.OtpGeneratiom.OTP;
 
 public class OtpDetails {
 	private long id;

@@ -1,4 +1,4 @@
-package com.OtpGeneratiom;
+package com.OtpGeneratiom.SendSMS;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
