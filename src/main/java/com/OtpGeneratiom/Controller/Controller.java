@@ -27,4 +27,22 @@ public class Controller {
         
        
     }
+    
+	@RequestMapping("/check")
+	public String check() {
+	String hello="hello";
+		try {
+
+			
+			
+			return hello;
+		}
+		catch (Exception e) {
+			System.out.println("Error In controller");
+			e.printStackTrace();
+			
+			return hello;
+		}
+		
+}
 }
