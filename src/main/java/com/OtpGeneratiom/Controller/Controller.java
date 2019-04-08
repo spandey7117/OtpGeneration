@@ -18,12 +18,12 @@ public class Controller {
     @RequestMapping("/otpGenerate")
     public OtpDetails otpDetails(@RequestParam(value="phoneNumber", defaultValue="000000000") String phoneNumber) {
     	int otp=(int)(Math.random()*10000);
-    //	String response=sm.sendSms("Hi Your OTP for registration is "+String.valueOf(otp), phoneNumber);
-    //	String[] res1= response.split(":");
-    //	String responseFinal=res1[14].substring(1,res1[14].length()-2);
-    //	System.out.println(responseFinal);
-    //	return new OtpDetails(counter.incrementAndGet(),otp, phoneNumber,"Hi Your OTP for registration is "+otp,responseFinal);
-    	return new OtpDetails(counter.incrementAndGet(),otp, phoneNumber,"Hi Your OTP for registration is "+otp,"responseFinal");
+    	String response=sm.sendSms("Hi Your OTP for registration is "+String.valueOf(otp), phoneNumber);
+    	String[] res1= response.split(":");
+    	String responseFinal=res1[14].substring(1,res1[14].length()-2);
+    	System.out.println(responseFinal);
+    	return new OtpDetails(counter.incrementAndGet(),otp, phoneNumber,"Hi Your OTP for registration is "+otp,responseFinal);
+    //	return new OtpDetails(counter.incrementAndGet(),otp, phoneNumber,"Hi Your OTP for registration is "+otp,"responseFinal");
         
        
     }
